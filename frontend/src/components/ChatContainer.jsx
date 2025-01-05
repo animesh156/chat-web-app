@@ -18,6 +18,7 @@ const ChatContainer = () => {
   } = useChatStore();
   const { authUser } = useAuthStore();
   const messageEndRef = useRef(null);
+ 
 
   useEffect(() => {
     getMessages(selectedUser._id);
@@ -44,7 +45,7 @@ const ChatContainer = () => {
   }
 
   return (
-    <div className="flex-1 flex flex-col overflow-auto" style={{
+    <div className="flex-1  flex flex-col overflow-auto"  style={{
       backgroundImage: "url('/chat-bg.jpg')",
       backgroundPosition: "center",
     backgroundSize: "cover",   // Ensures the image covers the entire div

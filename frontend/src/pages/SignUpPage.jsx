@@ -2,9 +2,10 @@ import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useThemeStore } from "../store/useThemeStore";
 
-import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
+
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,6 +16,7 @@ const SignUpPage = () => {
   });
 
   const { signup, isSigningUp } = useAuthStore();
+  const { theme } = useThemeStore();
 
   const validateForm = () => {
     if (!formData.fullName.trim()) return toast.error("Full name is required");
@@ -35,12 +37,12 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
-      {/* left side */}
-      <div className="flex flex-col justify-center items-center p-6 sm:p-12">
-        <div className="w-full max-w-md space-y-8">
-          {/* LOGO */}
-          <div className="text-center mb-8">
+    <>
+    
+      <div className="flex flex-col  items-center h-screen sm:p-12" data-theme={theme}>
+        <div className="w-full max-w-md space-y-5">
+        
+          <div className="text-center mb-5">
             <div className="flex flex-col items-center gap-2 group">
               <div
                 className="size-12 rounded-xl bg-primary/10 flex items-center justify-center 
@@ -142,13 +144,8 @@ const SignUpPage = () => {
         </div>
       </div>
 
-      {/* right side */}
-
-      <AuthImagePattern
-        title="Join our community"
-        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
-      />
-    </div>
+     
+    </>
   );
 };
 export default SignUpPage;

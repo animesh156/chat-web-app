@@ -4,12 +4,14 @@ import { Image, Send, X, Smile } from "lucide-react"; // Added Smile icon for Em
 import toast from "react-hot-toast";
 import EmojiPicker from 'emoji-picker-react';
 
+
 const MessageInput = () => {
   const [text, setText] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const fileInputRef = useRef(null);
   const { sendMessage } = useChatStore();
+ 
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -55,7 +57,7 @@ const MessageInput = () => {
   };
 
   return (
-    <div className="p-4 w-full">
+    <div className="p-4 w-full" >
       {imagePreview && (
         <div className="mb-3 flex items-center gap-2">
           <div className="relative">

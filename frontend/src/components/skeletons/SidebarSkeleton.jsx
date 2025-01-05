@@ -1,13 +1,15 @@
 import { Users } from "lucide-react";
+import { useThemeStore } from "../../store/useThemeStore";
 
 const SidebarSkeleton = () => {
   // Create 8 skeleton items
   const skeletonContacts = Array(8).fill(null);
+  const { theme } = useThemeStore();
 
   return (
     <aside
       className="h-full w-20 lg:w-72 border-r border-base-300 
-    flex flex-col transition-all duration-200"
+    flex flex-col transition-all duration-200" data-theme = {theme}
     >
       {/* Header */}
       <div className="border-b border-base-300 w-full p-5">
