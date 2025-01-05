@@ -44,7 +44,12 @@ const ChatContainer = () => {
   }
 
   return (
-    <div className="flex-1 flex flex-col overflow-auto">
+    <div className="flex-1 flex flex-col overflow-auto" style={{
+      backgroundImage: "url('/chat-bg.jpg')",
+      backgroundPosition: "center",
+    backgroundSize: "cover",   // Ensures the image covers the entire div
+    backgroundRepeat: "no-repeat",
+    }}>
       <ChatHeader />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
