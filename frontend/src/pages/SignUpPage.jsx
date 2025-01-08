@@ -39,7 +39,7 @@ const SignUpPage = () => {
   return (
     <>
     
-      <div className="flex flex-col  items-center h-screen sm:p-12" data-theme={theme}>
+      <div className="flex flex-col  items-center h-screen p-12" data-theme={theme}>
         <div className="w-full max-w-md space-y-5">
         
           <div className="text-center mb-5">

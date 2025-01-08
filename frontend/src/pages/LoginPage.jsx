@@ -21,7 +21,7 @@ const LoginPage = () => {
   return (
     <>
      
-      <div className="flex flex-col justify-center items-center h-screen sm:p-12" data-theme={theme}>
+      <div className="flex flex-col justify-center items-center h-screen p-12" data-theme={theme}>
         <div className="w-full max-w-md space-y-8">
           {/* Logo */}
           <div className="text-center mb-8">
